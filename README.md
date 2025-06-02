@@ -1,10 +1,26 @@
 # CardiacScan ❤💛🖤
-`https://cardiacscan.onrender.com/`
+
+<u>Table of Contents:
+
+-[Getting Started](#how-it-works)
+
+-[Training Method](#training-the-model)
+
+-[Testing the model](#model-accuracy-precision-and-other-statistics)
+
+-[Credits](#credits)
+
+</u>
+
+
+## How it works:
+
+# [Link to the app!](https://cardiacscan.onrender.com/)
 ###### The app might take a minute to start, since I am using a free version of Render.
 
 <img src="https://raw.githubusercontent.com/faiiyad/CardiacScan/refs/heads/main/images/all_heart.gif" width="300" alt="Heart GIF">
 
-## How it works:
+
 The app uses a machine learning model (RandomForestClassifier) to predict the likelihood of a heart disease in the user. A dataset containing previous patient's health records is used to train the model.
 
 
