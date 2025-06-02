@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+    --text-color: rgb(0, 0, 0);
+    --background-color: #ffffff;
+}
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
+}
+
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    background-color: var(--background-color);
+    transition: background-color 500ms;
+    /* position: fixed; */
+    width: 100%; /* Ensure it spans full width */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: large;
+}
+
+nav.sticking {
+    background-color: rgb(50, 50, 50);
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px;
+}    
+
+nav .right a span{
+    margin-left: 4px;
+}
+
+/* hero section */
+.hero {
+    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+}
+
+.hero .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(-3rem);
+}
+
+
+
+
+
+
+
+.heart{
+    /* border: 1px solid black; */
+    margin-bottom: 20px;
+    padding-bottom: 10px
+}
+
+
+
+/* footer section!! */
+
+
+
+.footer{
+    padding-top: 10px;
+    padding: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+}
+
+
+
+@media (max-width: 600px){
+    /* NAVBAR */
+    nav {
+        padding: 0 20px;
+    }
+
+    img{
+        width: 50px;
+        height: auto;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a span{
+        display: none;
+    }
+    /* hero */
+
+    .hero .text{
+        transform: translateY(+5rem);
+        padding-bottom: 1rem;
+    }
+
+
+    .hero .text h2 {
+        font-size: 25px;
+
+    }
+    .hero .text .links a span{
+        display: none;
+    }
+
+
+    .hero {
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    .heart {
+        width: 80px;
+        height: auto;
+    }
+
+    .about, .faq, .footer {
+        padding: 30px 15px;
+    }
+
+
+}

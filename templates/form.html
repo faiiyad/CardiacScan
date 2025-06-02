@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main>
+        <!------------------------>
+        <section class="hero">
+            <div class="text">
+                
+                <img class='heart' src="/img/crimson_heart.gif" alt="Red Heart !" class="heart" width="125px" height="auto">
+                <button id="get-started-btn" class="submit-btn">Get Started</button>
+                <div id="form-wrapper" class="hidden">
+                        <div class="input_form">
+
+                        <form action="{{ url_for('index') }}" method="post">
+                            <div class="r">
+                                <div class="q">
+                                    <label for="age">Age:</label>
+                                        <input type="range" name="age" id="age" min="0" max="150" step="1", value="50" required />
+                                    <span class="under-text">Selected age: <output for="age" style="color: crimson;">50</output></span>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="sex">Sex:</label>
+                                    <select name="sex" id="sex" required>
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                    <option value="1">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="cp">Chest Pain:</label>
+                                    <select name="cp" id="cp" required>
+                                        <option value="1">Typical Angina</option>
+                                        <option value="2">Atypical Angina</option>
+                                        <option value="3">Non-Anginal Pain</option>
+                                        <option value="4">Asympotmatic</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="trestbps">Resting Blood Pressure:</label>
+                                    <input type="range" name="trestbps" id="trestbps" min="50" max="200" step="1", value="100" required />
+                                    <span class="under-text">Selected rBP: <output for="trestbps" style="color: crimson;">100</output></span>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="chol">Cholesterol:</label>
+                                    <input type="range" name="chol" id="chol" min="0" max="500" step="1", value="200" required />
+                                    <span class="under-text">Selected Cholesterol: <output for="chol" style="color: crimson;">200</output></span>
+                                    
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="fbs">Fasting Blood Sugar:</label>
+                                    <select name="fbs" id="fbs" required>
+                                        <option value="1">Greater than 120mg/dl</option>
+                                        <option value="0">Less than or equal to 120mg/dl</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="restecg">Resting ECG:</label>
+                                    <select name="restecg" id="restecg" required>
+                                        <option value="0">Normal</option>
+                                        <option value="1">ST-T wave abnormality</option>
+                                        <option value="3">Probable or definite left ventricular hypertrophy</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="r">
+                                <div class="q">
+                                    <label for="thalach">Maximum heart rate achieved:</label>
+                                    <input type="range" name="thalach" id="thalach" min="50" max="200" step="1", value="100" required />
+                                    <span class="under-text">Selected heart rate: <output for="thalach" style="color: crimson;">100</output></span>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="exang">Exercise Induced Anginga:</label>
+                                    <select name="exang" id="exang" required>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="oldpeak">Exercise-induced ST depression:</label>
+                                    <select name="oldpeak" id="oldpeak">
+                                        <option value="1.5">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="slope">Slope of the peak exercise ST segment:</label>
+                                    <select name="slope" id="slope" required>
+                                        <option value="1">Uplsoping</option>
+                                        <option value="2">Flat</option>
+                                        <option value="3">Downsloping</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="ca">Major vessels colored by flourosopy:</label>
+                                    <select name="ca" id="ca">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    
+                                </div>
+                                
+                                <div class="q">
+                                    <label for="thal">Thalassemia:</label>
+                                    <select name="thal" id="thal">
+                                        <option value="3">Normal</option>
+                                        <option value="6">Fixed defect</option>
+                                        <option value="7">Reversable defect</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="r">
+                                <div class="q">
+                                    <button type="submit" class="submit-btn">Predict</button>
+                                </div>
+                            </div>
+                
+                        </form>
+
+
+                    </div>
+                </div>
+                
+                      
+                      
+                      
+                
+            </div>
+            
+            
+        </section>
+
+
+        <!----------------------->
+
+        <section id="about" class="about">
+            <h2>About.</h2>
+            <span>
+                This app uses a machine learning model trained on previous patients' health records. <br>
+                The results provided by this application are for informational and educational purposes only.  
+                They do <strong style="color: crimson;">not</strong> constitute professional medical advice, diagnosis, or treatment. <br>
+                <strong>Always consult a qualified healthcare provider for any medical concerns.</strong>
+            </span>
+              
+       </section>
+
+       <!----------------------->
+
+       <section id="faq" class="faq">
+            <h2 style="color: crimson;">FAQ</h2>
+            
+            <div class="accordion-wrapper">
+                <button class="accordion-btn">What is the accuracy of the model?</button>
+                <div class="accordion-panel">
+                <p>The accuracy of the model is <span style="color: crimson;">~88%</span>.</p>
+                </div>
+
+                <button class="accordion-btn">What is the precision of the model?</button>
+                <div class="accordion-panel">
+                <p>The precision of the model is <span style="color: crimson;">~87%</span>.</p>
+                </div>
+
+                <button class="accordion-btn">What model does this app use?</button>
+                <div class="accordion-panel">
+                <p>The app uses a <span style="color: crimson;">RandomForestClassifier</span> with 150 estimators.</p>
+                </div>
+            </div>
+       </section>
+
+       
+
+       
+
+
+
+        <!------------------------>
+
+        <section class="footer">
+            ©2025 Faiyad Ahmed Masnoon.
+        </section>
+
+        <script src="/scripts/script.js"></script>
+    </main>
+{% endblock content %}

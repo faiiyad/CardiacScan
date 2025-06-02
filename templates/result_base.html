@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        CardiacScan
+    {% endblock title %}</title>
+    <link rel="stylesheet" href="/css/result.css">
+    <script src="https://kit.fontawesome.com/3801fa37f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-----NAVBAR----->
+    <nav>
+       <div class="left">
+        <a href="/">Cardiac<a style="color: crimson;">Scan</a>
+       </div> 
+       <div class="right">
+        <a href="{{ url_for('index') }}#about">
+            <i class="fa-solid fa-heart-pulse" style="color: crimson;"></i>
+            <span>About</span>
+        </a> 
+        <a href="{{ url_for('index') }}#faq">
+            <i class="fa-solid fa-circle-question" style="color: crimson;"></i>
+            <span>FAQ</span>
+        </a>
+        <a href="https://github.com/faiiyad/CardiacScan" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github fa-lg" style="color: crimson;"></i>
+            <span>Github</span>
+        </a>
+       </div>
+    </nav>
+
+
+    <main>
+        <!------------------------>
+        {% block content %}
+            
+        {% endblock content %}
+
+
+        <!----------------------->
+
+        
+
+       <!----------------------->
+
+       
+
+       
+
+       
+
+
+
+        <!------------------------>
+
+        <section class="footer">
+            ©2025 Faiyad Ahmed Masnoon.
+        </section>
+
+       
+    </main>
+    
+    
+</body>
